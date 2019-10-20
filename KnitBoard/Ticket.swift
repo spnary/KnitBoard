@@ -9,11 +9,11 @@
 import Foundation
 
 enum TicketStatus: String {
-    case needsDefinition
-    case readyToKnit
-    case inProgress
-    case blocking
-    case finished
+    case needsDefinition = "Needs Definition"
+    case readyToKnit = "Ready to Knit"
+    case inProgress = "In Progress"
+    case blocking = "Blocking"
+    case finished = "Finished"
 }
 
 struct Ticket: Identifiable {

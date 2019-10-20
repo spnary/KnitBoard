@@ -9,18 +9,20 @@
 import SwiftUI
 
 struct TicketView: View {
+    var ticket: Ticket
     var body: some View {
-        VStack(alignment: .leading) {
-            PropertyView(propertyName: "Name", propertyValue: "myproject")
-            PropertyView(propertyName: "Status", propertyValue: "Ready to Knit")
-            PropertyView(propertyName: "Pattern", propertyValue: "a sweet pattern")
-            PropertyView(propertyName: "Yarn", propertyValue: "Some soft merino")
+        VStack(alignment: HorizontalAlignment.leading) {
+            PropertyView(propertyName: "Name", propertyValue: ticket.name)
+            PropertyView(propertyName: "Status", propertyValue: ticket.status.rawValue)
+            PropertyView(propertyName: "Pattern", propertyValue: ticket.pattern)
+            PropertyView(propertyName: "Yarn", propertyValue: ticket.yarn)
         }
     }
 }
 
 struct TicketView_Previews: PreviewProvider {
     static var previews: some View {
-        TicketView()
+        let previewTicket = Ticket(name: "My Project", pattern: "A cool pattern", yarn: "A soft yarn")
+        return TicketView(ticket: previewTicket)
     }
 }

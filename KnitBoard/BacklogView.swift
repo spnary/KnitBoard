@@ -9,9 +9,9 @@
 import SwiftUI
 
 struct BacklogView: View {
-    var tickets: [Ticket]
+    var backlog: Backlog
     var body: some View {
-        List(tickets) { ticket in
+        List(backlog.tickets) { ticket in
             TicketView(ticket: ticket)
         }
     }
@@ -23,6 +23,7 @@ struct BacklogView_Previews: PreviewProvider {
             Ticket(name: "Project 1", pattern: "Pattern 1", yarn: "Yarn 1"),
             Ticket(name: "Project 2", pattern: "Pattern 2", yarn: "Yarn 2")
         ]
-        return BacklogView(tickets: tickets)
+        let backlog = Backlog(tickets: tickets)
+        return BacklogView(backlog: backlog)
     }
 }

@@ -9,12 +9,12 @@
 import SwiftUI
 
 struct ContentView: View {
-    var tickets: [Ticket]
+    var backlog: Backlog
     var body: some View {
         VStack(alignment: .leading) {
             HStack() {
                 Button(action: {
-                    
+                    // create a new ticket
                 }) {
                     Text("+")
                 }
@@ -25,7 +25,7 @@ struct ContentView: View {
                     Text("Backlog")
                     Text("Board")
                 }
-                BacklogView(tickets: tickets)
+                BacklogView(backlog: backlog)
             }
         }
     }
@@ -39,6 +39,7 @@ struct ContentView_Previews: PreviewProvider {
             Ticket(name: "Project 2", pattern: "Pattern 2", yarn: "Yarn 2"),
             Ticket(name: "Project 3", pattern: "Pattern 3", yarn: "Yarn 3")
         ]
-        return ContentView(tickets: tickets)
+        let backlog = Backlog(tickets: tickets)
+        return ContentView(backlog: backlog)
     }
 }

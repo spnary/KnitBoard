@@ -14,6 +14,9 @@
 		BA4D4C9B235CC59C0014D632 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA4D4C99235CC59C0014D632 /* Main.storyboard */; };
 		BA4D4CA7235CC59C0014D632 /* KnitBoardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4D4CA6235CC59C0014D632 /* KnitBoardTests.swift */; };
 		BA4D4CB2235CC59C0014D632 /* KnitBoardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4D4CB1235CC59C0014D632 /* KnitBoardUITests.swift */; };
+		BA4D4CC0235CCA810014D632 /* BacklogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4D4CBF235CCA810014D632 /* BacklogView.swift */; };
+		BA4D4CC2235CCAEB0014D632 /* TicketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4D4CC1235CCAEB0014D632 /* TicketView.swift */; };
+		BA4D4CC4235CD3650014D632 /* PropertyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4D4CC3235CD3650014D632 /* PropertyView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +51,9 @@
 		BA4D4CAD235CC59C0014D632 /* KnitBoardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KnitBoardUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA4D4CB1235CC59C0014D632 /* KnitBoardUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnitBoardUITests.swift; sourceTree = "<group>"; };
 		BA4D4CB3235CC59C0014D632 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA4D4CBF235CCA810014D632 /* BacklogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BacklogView.swift; sourceTree = "<group>"; };
+		BA4D4CC1235CCAEB0014D632 /* TicketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketView.swift; sourceTree = "<group>"; };
+		BA4D4CC3235CD3650014D632 /* PropertyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +106,9 @@
 			children = (
 				BA4D4C90235CC5970014D632 /* AppDelegate.swift */,
 				BA4D4C92235CC5970014D632 /* ContentView.swift */,
+				BA4D4CBF235CCA810014D632 /* BacklogView.swift */,
+				BA4D4CC1235CCAEB0014D632 /* TicketView.swift */,
+				BA4D4CC3235CD3650014D632 /* PropertyView.swift */,
 				BA4D4C94235CC59C0014D632 /* Assets.xcassets */,
 				BA4D4C99235CC59C0014D632 /* Main.storyboard */,
 				BA4D4C9C235CC59C0014D632 /* Info.plist */,
@@ -266,7 +275,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA4D4CC0235CCA810014D632 /* BacklogView.swift in Sources */,
+				BA4D4CC4235CD3650014D632 /* PropertyView.swift in Sources */,
 				BA4D4C93235CC5970014D632 /* ContentView.swift in Sources */,
+				BA4D4CC2235CCAEB0014D632 /* TicketView.swift in Sources */,
 				BA4D4C91235CC5970014D632 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

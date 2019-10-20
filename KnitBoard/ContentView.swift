@@ -10,8 +10,23 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello World")
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
+        VStack(alignment: .leading) {
+            HStack() {
+                Button(action: {
+                    
+                }) {
+                    Text("+")
+                }
+                Text("KnitBoard")
+            }
+            HStack(alignment: .top  ) {
+                VStack() {
+                    Text("Backlog")
+                    Text("Board")
+                }
+                BacklogView()
+            }
+        }
     }
 }
 

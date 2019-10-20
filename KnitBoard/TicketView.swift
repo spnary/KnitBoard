@@ -11,12 +11,15 @@ import SwiftUI
 struct TicketView: View {
     var ticket: Ticket
     var body: some View {
-        VStack(alignment: HorizontalAlignment.leading) {
+        VStack(alignment: .leading) {
             PropertyView(propertyName: "Name", propertyValue: ticket.name)
             PropertyView(propertyName: "Status", propertyValue: ticket.status.rawValue)
             PropertyView(propertyName: "Pattern", propertyValue: ticket.pattern)
             PropertyView(propertyName: "Yarn", propertyValue: ticket.yarn)
         }
+        .frame(maxWidth: .infinity, alignment:.leading)
+        .padding()
+        .background(Color("textBackgroundColor"))
     }
 }
 

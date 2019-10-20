@@ -14,6 +14,8 @@ struct BacklogView: View {
         List(backlog.tickets) { ticket in
             TicketView(ticket: ticket)
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+    .background(Color("windowBackgroundColor"))
     }
 }
 

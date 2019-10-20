@@ -10,23 +10,32 @@ import SwiftUI
 
 struct ContentView: View {
     var backlog: Backlog
+    var menuOptions: [String] = [
+        "Backlog",
+        "Board"
+    ]
     var body: some View {
         VStack(alignment: .leading) {
-            HStack() {
+            HStack(alignment: .center) {
                 Button(action: {
-                    // create a new ticket
+
                 }) {
                     Text("+")
-                }
-                Text("KnitBoard")
+                }.padding()
+                Spacer()
+                Text("KnitBoard").font(.title)
+                Spacer()
             }
-            HStack(alignment: .top  ) {
-                VStack(alignment: .leading) {
-                    Text("Backlog")
-                    Text("Board")
-                }
-                BacklogView(backlog: backlog)
-            }
+            NavigationView() {
+                List() {
+                    NavigationLink(destination: BacklogView(backlog: backlog) ) {
+                        Text("Backlog")
+                    }
+                    NavigationLink(destination: Text("Build the board here").frame(maxWidth: .infinity, maxHeight: .infinity)) {
+                        Text("Board")
+                    }
+                }.frame(minWidth: 100, maxWidth: 200)
+                }.navigationViewStyle(DoubleColumnNavigationViewStyle())
         }
     }
 }

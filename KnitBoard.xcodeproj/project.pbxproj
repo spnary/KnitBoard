@@ -1,0 +1,602 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BA4D4C91235CC5970014D632 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4D4C90235CC5970014D632 /* AppDelegate.swift */; };
+		BA4D4C93235CC5970014D632 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4D4C92235CC5970014D632 /* ContentView.swift */; };
+		BA4D4C95235CC59C0014D632 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA4D4C94235CC59C0014D632 /* Assets.xcassets */; };
+		BA4D4C98235CC59C0014D632 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA4D4C97235CC59C0014D632 /* Preview Assets.xcassets */; };
+		BA4D4C9B235CC59C0014D632 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA4D4C99235CC59C0014D632 /* Main.storyboard */; };
+		BA4D4CA7235CC59C0014D632 /* KnitBoardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4D4CA6235CC59C0014D632 /* KnitBoardTests.swift */; };
+		BA4D4CB2235CC59C0014D632 /* KnitBoardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4D4CB1235CC59C0014D632 /* KnitBoardUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BA4D4CA3235CC59C0014D632 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BA4D4C85235CC5970014D632 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BA4D4C8C235CC5970014D632;
+			remoteInfo = KnitBoard;
+		};
+		BA4D4CAE235CC59C0014D632 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BA4D4C85235CC5970014D632 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BA4D4C8C235CC5970014D632;
+			remoteInfo = KnitBoard;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BA4D4C8D235CC5970014D632 /* KnitBoard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KnitBoard.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA4D4C90235CC5970014D632 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BA4D4C92235CC5970014D632 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		BA4D4C94235CC59C0014D632 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BA4D4C97235CC59C0014D632 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BA4D4C9A235CC59C0014D632 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BA4D4C9C235CC59C0014D632 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA4D4C9D235CC59C0014D632 /* KnitBoard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KnitBoard.entitlements; sourceTree = "<group>"; };
+		BA4D4CA2235CC59C0014D632 /* KnitBoardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KnitBoardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA4D4CA6235CC59C0014D632 /* KnitBoardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnitBoardTests.swift; sourceTree = "<group>"; };
+		BA4D4CA8235CC59C0014D632 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA4D4CAD235CC59C0014D632 /* KnitBoardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KnitBoardUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA4D4CB1235CC59C0014D632 /* KnitBoardUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnitBoardUITests.swift; sourceTree = "<group>"; };
+		BA4D4CB3235CC59C0014D632 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BA4D4C8A235CC5970014D632 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA4D4C9F235CC59C0014D632 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA4D4CAA235CC59C0014D632 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BA4D4C84235CC5970014D632 = {
+			isa = PBXGroup;
+			children = (
+				BA4D4C8F235CC5970014D632 /* KnitBoard */,
+				BA4D4CA5235CC59C0014D632 /* KnitBoardTests */,
+				BA4D4CB0235CC59C0014D632 /* KnitBoardUITests */,
+				BA4D4C8E235CC5970014D632 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BA4D4C8E235CC5970014D632 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BA4D4C8D235CC5970014D632 /* KnitBoard.app */,
+				BA4D4CA2235CC59C0014D632 /* KnitBoardTests.xctest */,
+				BA4D4CAD235CC59C0014D632 /* KnitBoardUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BA4D4C8F235CC5970014D632 /* KnitBoard */ = {
+			isa = PBXGroup;
+			children = (
+				BA4D4C90235CC5970014D632 /* AppDelegate.swift */,
+				BA4D4C92235CC5970014D632 /* ContentView.swift */,
+				BA4D4C94235CC59C0014D632 /* Assets.xcassets */,
+				BA4D4C99235CC59C0014D632 /* Main.storyboard */,
+				BA4D4C9C235CC59C0014D632 /* Info.plist */,
+				BA4D4C9D235CC59C0014D632 /* KnitBoard.entitlements */,
+				BA4D4C96235CC59C0014D632 /* Preview Content */,
+			);
+			path = KnitBoard;
+			sourceTree = "<group>";
+		};
+		BA4D4C96235CC59C0014D632 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				BA4D4C97235CC59C0014D632 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		BA4D4CA5235CC59C0014D632 /* KnitBoardTests */ = {
+			isa = PBXGroup;
+			children = (
+				BA4D4CA6235CC59C0014D632 /* KnitBoardTests.swift */,
+				BA4D4CA8235CC59C0014D632 /* Info.plist */,
+			);
+			path = KnitBoardTests;
+			sourceTree = "<group>";
+		};
+		BA4D4CB0235CC59C0014D632 /* KnitBoardUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BA4D4CB1235CC59C0014D632 /* KnitBoardUITests.swift */,
+				BA4D4CB3235CC59C0014D632 /* Info.plist */,
+			);
+			path = KnitBoardUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BA4D4C8C235CC5970014D632 /* KnitBoard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA4D4CB6235CC59C0014D632 /* Build configuration list for PBXNativeTarget "KnitBoard" */;
+			buildPhases = (
+				BA4D4C89235CC5970014D632 /* Sources */,
+				BA4D4C8A235CC5970014D632 /* Frameworks */,
+				BA4D4C8B235CC5970014D632 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KnitBoard;
+			productName = KnitBoard;
+			productReference = BA4D4C8D235CC5970014D632 /* KnitBoard.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BA4D4CA1235CC59C0014D632 /* KnitBoardTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA4D4CB9235CC59C0014D632 /* Build configuration list for PBXNativeTarget "KnitBoardTests" */;
+			buildPhases = (
+				BA4D4C9E235CC59C0014D632 /* Sources */,
+				BA4D4C9F235CC59C0014D632 /* Frameworks */,
+				BA4D4CA0235CC59C0014D632 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BA4D4CA4235CC59C0014D632 /* PBXTargetDependency */,
+			);
+			name = KnitBoardTests;
+			productName = KnitBoardTests;
+			productReference = BA4D4CA2235CC59C0014D632 /* KnitBoardTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BA4D4CAC235CC59C0014D632 /* KnitBoardUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA4D4CBC235CC59C0014D632 /* Build configuration list for PBXNativeTarget "KnitBoardUITests" */;
+			buildPhases = (
+				BA4D4CA9235CC59C0014D632 /* Sources */,
+				BA4D4CAA235CC59C0014D632 /* Frameworks */,
+				BA4D4CAB235CC59C0014D632 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BA4D4CAF235CC59C0014D632 /* PBXTargetDependency */,
+			);
+			name = KnitBoardUITests;
+			productName = KnitBoardUITests;
+			productReference = BA4D4CAD235CC59C0014D632 /* KnitBoardUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BA4D4C85235CC5970014D632 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1110;
+				LastUpgradeCheck = 1110;
+				ORGANIZATIONNAME = "Stephen Nary";
+				TargetAttributes = {
+					BA4D4C8C235CC5970014D632 = {
+						CreatedOnToolsVersion = 11.1;
+					};
+					BA4D4CA1235CC59C0014D632 = {
+						CreatedOnToolsVersion = 11.1;
+						TestTargetID = BA4D4C8C235CC5970014D632;
+					};
+					BA4D4CAC235CC59C0014D632 = {
+						CreatedOnToolsVersion = 11.1;
+						TestTargetID = BA4D4C8C235CC5970014D632;
+					};
+				};
+			};
+			buildConfigurationList = BA4D4C88235CC5970014D632 /* Build configuration list for PBXProject "KnitBoard" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BA4D4C84235CC5970014D632;
+			productRefGroup = BA4D4C8E235CC5970014D632 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BA4D4C8C235CC5970014D632 /* KnitBoard */,
+				BA4D4CA1235CC59C0014D632 /* KnitBoardTests */,
+				BA4D4CAC235CC59C0014D632 /* KnitBoardUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BA4D4C8B235CC5970014D632 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA4D4C9B235CC59C0014D632 /* Main.storyboard in Resources */,
+				BA4D4C98235CC59C0014D632 /* Preview Assets.xcassets in Resources */,
+				BA4D4C95235CC59C0014D632 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA4D4CA0235CC59C0014D632 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA4D4CAB235CC59C0014D632 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BA4D4C89235CC5970014D632 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA4D4C93235CC5970014D632 /* ContentView.swift in Sources */,
+				BA4D4C91235CC5970014D632 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA4D4C9E235CC59C0014D632 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA4D4CA7235CC59C0014D632 /* KnitBoardTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA4D4CA9235CC59C0014D632 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA4D4CB2235CC59C0014D632 /* KnitBoardUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BA4D4CA4235CC59C0014D632 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BA4D4C8C235CC5970014D632 /* KnitBoard */;
+			targetProxy = BA4D4CA3235CC59C0014D632 /* PBXContainerItemProxy */;
+		};
+		BA4D4CAF235CC59C0014D632 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BA4D4C8C235CC5970014D632 /* KnitBoard */;
+			targetProxy = BA4D4CAE235CC59C0014D632 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BA4D4C99235CC59C0014D632 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BA4D4C9A235CC59C0014D632 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BA4D4CB4235CC59C0014D632 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BA4D4CB5235CC59C0014D632 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		BA4D4CB7235CC59C0014D632 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = KnitBoard/KnitBoard.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"KnitBoard/Preview Content\"";
+				DEVELOPMENT_TEAM = JHCNH68BKK;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = KnitBoard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.stephenpnary.KnitBoard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		BA4D4CB8235CC59C0014D632 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = KnitBoard/KnitBoard.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"KnitBoard/Preview Content\"";
+				DEVELOPMENT_TEAM = JHCNH68BKK;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = KnitBoard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.stephenpnary.KnitBoard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		BA4D4CBA235CC59C0014D632 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = JHCNH68BKK;
+				INFOPLIST_FILE = KnitBoardTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.stephenpnary.KnitBoardTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KnitBoard.app/Contents/MacOS/KnitBoard";
+			};
+			name = Debug;
+		};
+		BA4D4CBB235CC59C0014D632 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = JHCNH68BKK;
+				INFOPLIST_FILE = KnitBoardTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.stephenpnary.KnitBoardTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KnitBoard.app/Contents/MacOS/KnitBoard";
+			};
+			name = Release;
+		};
+		BA4D4CBD235CC59C0014D632 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = JHCNH68BKK;
+				INFOPLIST_FILE = KnitBoardUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.stephenpnary.KnitBoardUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = KnitBoard;
+			};
+			name = Debug;
+		};
+		BA4D4CBE235CC59C0014D632 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = JHCNH68BKK;
+				INFOPLIST_FILE = KnitBoardUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.stephenpnary.KnitBoardUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = KnitBoard;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BA4D4C88235CC5970014D632 /* Build configuration list for PBXProject "KnitBoard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA4D4CB4235CC59C0014D632 /* Debug */,
+				BA4D4CB5235CC59C0014D632 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BA4D4CB6235CC59C0014D632 /* Build configuration list for PBXNativeTarget "KnitBoard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA4D4CB7235CC59C0014D632 /* Debug */,
+				BA4D4CB8235CC59C0014D632 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BA4D4CB9235CC59C0014D632 /* Build configuration list for PBXNativeTarget "KnitBoardTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA4D4CBA235CC59C0014D632 /* Debug */,
+				BA4D4CBB235CC59C0014D632 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BA4D4CBC235CC59C0014D632 /* Build configuration list for PBXNativeTarget "KnitBoardUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA4D4CBD235CC59C0014D632 /* Debug */,
+				BA4D4CBE235CC59C0014D632 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BA4D4C85235CC5970014D632 /* Project object */;
+}

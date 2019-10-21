@@ -8,7 +8,11 @@
 
 import Foundation
 
-enum TicketStatus: String {
+enum TicketStatus: String, CaseIterable, Identifiable {
+    var id: String {
+        return self.rawValue
+    }
+    
     case needsDefinition = "Needs Definition"
     case readyToKnit = "Ready to Knit"
     case inProgress = "In Progress"

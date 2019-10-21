@@ -20,12 +20,20 @@ enum TicketStatus: String, CaseIterable, Identifiable {
     case finished = "Finished"
 }
 
-struct Ticket: Identifiable {
+class Ticket: Identifiable, ObservableObject, Hashable {
+    static func == (lhs: Ticket, rhs: Ticket) -> Bool {
+        return lhs.id == rhs.id
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+    
     let id: UUID
-    var name: String
-    var status: TicketStatus
-    var pattern: String
-    var yarn: String
+    @Published var name: String
+    @Published var status: TicketStatus
+    @Published var pattern: String
+    @Published var yarn: String
     
     init(name: String, status: TicketStatus = .needsDefinition, pattern: String, yarn: String) {
         self.id = UUID.init()

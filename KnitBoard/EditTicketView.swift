@@ -12,15 +12,22 @@ struct EditTicketView: View {
     @Binding var ticket: Ticket
     var statuses: [TicketStatus] = TicketStatus.allCases
     var body: some View {
-        VStack() {
+        let statusBinding = Binding(get: {
+            self.statuses.firstIndex(of: self.ticket.status) ?? 0
+            
+        }, set: { index in
+            self.ticket.status = self.statuses[index]
+            
+        })
+        return VStack() {
             HStack() {
                 Text("Name:")
                 TextField("Name", text: $ticket.name)
                 
             }
-            Picker(selection: $ticket.status, label: Text("Status:")){
-                ForEach(statuses) { status in
-                    Text(status.rawValue)
+            Picker(selection: statusBinding, label: Text("Status:")){
+                ForEach(0 ..< statuses.count) { index in
+                    Text(self.statuses[index].rawValue).tag(index)
                 }
             }
             HStack() {

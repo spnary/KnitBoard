@@ -9,13 +9,22 @@
 import SwiftUI
 
 struct BacklogView: View {
-    var backlog: Backlog
+    @EnvironmentObject var backlog: Backlog
     var body: some View {
-        List(backlog.tickets) { ticket in
-            TicketView(ticket: ticket)
+        NavigationView() {
+                List(backlog.tickets) { ticket in
+                    NavigationLink(destination: EditTicketView(ticket: Binding<Ticket>(get: { ticket }, set: { ticket in
+                        self.backlog.updateTicket(ticket)
+                    }))) {
+                        TicketView(ticket: ticket)
+                    }
+                    
+
+                }
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(Color("windowBackgroundColor"))
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-    .background(Color("windowBackgroundColor"))
+        .navigationViewStyle(DefaultNavigationViewStyle())
     }
 }
 
@@ -26,6 +35,6 @@ struct BacklogView_Previews: PreviewProvider {
             Ticket(name: "Project 2", pattern: "Pattern 2", yarn: "Yarn 2")
         ]
         let backlog = Backlog(tickets: tickets)
-        return BacklogView(backlog: backlog)
+        return BacklogView().environmentObject(backlog)
     }
 }

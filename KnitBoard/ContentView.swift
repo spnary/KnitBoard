@@ -18,7 +18,7 @@ struct ContentView: View {
         VStack(alignment: .leading) {
             HStack(alignment: .center) {
                 Button(action: {
-
+                    self.addTicket()
                 }) {
                     Text("+")
                 }.padding()
@@ -28,7 +28,7 @@ struct ContentView: View {
             }
             NavigationView() {
                 List() {
-                    NavigationLink(destination: BacklogView(backlog: backlog) ) {
+                    NavigationLink(destination: BacklogView().environmentObject(backlog) ) {
                         Text("Backlog")
                     }
                     NavigationLink(destination: Text("Build the board here").frame(maxWidth: .infinity, maxHeight: .infinity)) {
@@ -37,6 +37,11 @@ struct ContentView: View {
                 }.frame(minWidth: 100, maxWidth: 200)
                 }.navigationViewStyle(DoubleColumnNavigationViewStyle())
         }
+    }
+    
+    func addTicket() {
+        let newTicket = Ticket(name: "", pattern: "", yarn: "")
+        backlog.tickets.append(newTicket)
     }
 }
 

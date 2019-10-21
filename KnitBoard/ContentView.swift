@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    var backlog: Backlog
+    @EnvironmentObject var backlog: Backlog
     var menuOptions: [String] = [
         "Backlog",
         "Board"
@@ -49,6 +49,6 @@ struct ContentView_Previews: PreviewProvider {
             Ticket(name: "Project 3", pattern: "Pattern 3", yarn: "Yarn 3")
         ]
         let backlog = Backlog(tickets: tickets)
-        return ContentView(backlog: backlog)
+        return ContentView().environmentObject(backlog)
     }
 }

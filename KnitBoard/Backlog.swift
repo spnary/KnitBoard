@@ -8,6 +8,10 @@
 
 import Foundation
 
-struct Backlog {
-    var tickets: [Ticket]
+class Backlog: ObservableObject{
+    @Published var tickets: [Ticket] = []
+    
+    init(tickets: [Ticket]) {
+        self.tickets = tickets
+    }
 }

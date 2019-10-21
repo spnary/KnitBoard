@@ -19,6 +19,7 @@
 		BA4D4CC4235CD3650014D632 /* PropertyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4D4CC3235CD3650014D632 /* PropertyView.swift */; };
 		BA4D4CC6235CD9E70014D632 /* Ticket.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4D4CC5235CD9E70014D632 /* Ticket.swift */; };
 		BA4D4CC8235CF0ED0014D632 /* Backlog.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4D4CC7235CF0ED0014D632 /* Backlog.swift */; };
+		BA4D4CCA235D1ADC0014D632 /* EditTicketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4D4CC9235D1ADC0014D632 /* EditTicketView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		BA4D4CC3235CD3650014D632 /* PropertyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyView.swift; sourceTree = "<group>"; };
 		BA4D4CC5235CD9E70014D632 /* Ticket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticket.swift; sourceTree = "<group>"; };
 		BA4D4CC7235CF0ED0014D632 /* Backlog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Backlog.swift; sourceTree = "<group>"; };
+		BA4D4CC9235D1ADC0014D632 /* EditTicketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTicketView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 				BA4D4CBF235CCA810014D632 /* BacklogView.swift */,
 				BA4D4CC1235CCAEB0014D632 /* TicketView.swift */,
 				BA4D4CC3235CD3650014D632 /* PropertyView.swift */,
+				BA4D4CC9235D1ADC0014D632 /* EditTicketView.swift */,
 				BA4D4CC5235CD9E70014D632 /* Ticket.swift */,
 				BA4D4CC7235CF0ED0014D632 /* Backlog.swift */,
 				BA4D4C94235CC59C0014D632 /* Assets.xcassets */,
@@ -285,6 +288,7 @@
 				BA4D4CC6235CD9E70014D632 /* Ticket.swift in Sources */,
 				BA4D4CC4235CD3650014D632 /* PropertyView.swift in Sources */,
 				BA4D4C93235CC5970014D632 /* ContentView.swift in Sources */,
+				BA4D4CCA235D1ADC0014D632 /* EditTicketView.swift in Sources */,
 				BA4D4CC8235CF0ED0014D632 /* Backlog.swift in Sources */,
 				BA4D4CC2235CCAEB0014D632 /* TicketView.swift in Sources */,
 				BA4D4C91235CC5970014D632 /* AppDelegate.swift in Sources */,

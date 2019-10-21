@@ -18,10 +18,10 @@ enum TicketStatus: String {
 
 struct Ticket: Identifiable {
     let id: UUID
-    let name: String
-    let status: TicketStatus
-    let pattern: String
-    let yarn: String
+    var name: String
+    var status: TicketStatus
+    var pattern: String
+    var yarn: String
     
     init(name: String, status: TicketStatus = .needsDefinition, pattern: String, yarn: String) {
         self.id = UUID.init()

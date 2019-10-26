@@ -12,10 +12,11 @@ struct PropertyView: View {
     var propertyName: String
     var propertyValue: String
     var body: some View {
-        HStack() {
+        HStack(alignment:.top) {
             Text("\(propertyName): ")
             Text(propertyValue)
-        }
+                
+        }.lineLimit(nil)
     }
 }
 

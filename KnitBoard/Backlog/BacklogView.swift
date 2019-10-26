@@ -31,11 +31,7 @@ struct BacklogView: View {
 
 struct BacklogView_Previews: PreviewProvider {
     static var previews: some View {
-        let tickets = [
-            Ticket(name: "Project 1", pattern: "Pattern 1", yarn: "Yarn 1"),
-            Ticket(name: "Project 2", pattern: "Pattern 2", yarn: "Yarn 2")
-        ]
-        let backlog = Backlog(tickets: tickets)
-        return BacklogView().environmentObject(backlog)
+        let backlog = Backlog(tickets: testTickets)
+        return BacklogView().environmentObject(backlog).frame(width: 200)
     }
 }

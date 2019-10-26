@@ -17,14 +17,13 @@ struct TicketView: View {
             PropertyView(propertyName: "Pattern", propertyValue: ticket.pattern)
             PropertyView(propertyName: "Yarn", propertyValue: ticket.yarn)
         }
-        .frame(maxWidth: .infinity, alignment:.leading)
         .padding()
     }
 }
 
 struct TicketView_Previews: PreviewProvider {
     static var previews: some View {
-        let previewTicket = Ticket(name: "My Project", pattern: "A cool pattern", yarn: "A soft yarn")
-        return TicketView(ticket: previewTicket)
+        let previewTicket = Ticket(name: "My Project with a really long name", pattern: "A cool pattern", yarn: "A soft yarn")
+        return TicketView(ticket: previewTicket).frame(width: 200)
     }
 }

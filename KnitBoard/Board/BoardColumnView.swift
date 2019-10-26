@@ -14,8 +14,10 @@ struct BoardColumnView: View {
     var body: some View {
         VStack(alignment: .center) {
             Text(status.description)
-            List(tickets.filter(){$0.status == status}) { ticket in
-                TicketView(ticket: ticket)
+            ScrollView() {
+                ForEach(tickets.filter(){$0.status == status}) { ticket in
+                    TicketView(ticket: ticket)
+                    }
             }
         }
     }
@@ -23,6 +25,6 @@ struct BoardColumnView: View {
 
 struct BoardColumnView_Previews: PreviewProvider {
     static var previews: some View {
-        BoardColumnView(status: .needsDefinition,tickets: .constant(testTickets))
+        BoardColumnView(status: .needsDefinition,tickets: .constant(testTickets)).frame(width: 200)
     }
 }

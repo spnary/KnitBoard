@@ -7,17 +7,34 @@
 //
 
 import Foundation
+import Combine
 
-enum TicketStatus: String, CaseIterable, Identifiable {
-    var id: String {
-        return self.rawValue
-    }
+protocol TicketUpdatedDelegate: class {
+    func ticketUpdated(_ ticket: Ticket)
+}
+
+enum TicketStatus: Int, CaseIterable {
     
-    case needsDefinition = "Needs Definition"
-    case readyToKnit = "Ready to Knit"
-    case inProgress = "In Progress"
-    case blocking = "Blocking"
-    case finished = "Finished"
+    case needsDefinition = 0
+    case readyToKnit
+    case inProgress
+    case blocking
+    case finished
+    
+    var description: String {
+        switch self {
+        case .needsDefinition:
+            return "Needs Definition"
+        case .readyToKnit:
+            return "Ready to Knit"
+        case .inProgress:
+            return "In Progress"
+        case .blocking:
+            return "Blocking"
+        case .finished:
+            return "Finished"
+        }
+    }
 }
 
 class Ticket: Identifiable, ObservableObject, Hashable {
@@ -31,7 +48,11 @@ class Ticket: Identifiable, ObservableObject, Hashable {
     
     let id: UUID
     @Published var name: String
-    @Published var status: TicketStatus
+    @Published var status: TicketStatus {
+        didSet{
+            objectWillChange.send()
+        }
+    }
     @Published var pattern: String
     @Published var yarn: String
     
@@ -42,4 +63,7 @@ class Ticket: Identifiable, ObservableObject, Hashable {
         self.pattern = pattern
         self.yarn = yarn
     }
+    
 }
+
+let testTicket = Ticket(name: "Project 1", status: .needsDefinition, pattern: "Pattern 1", yarn: "Yarn 1")

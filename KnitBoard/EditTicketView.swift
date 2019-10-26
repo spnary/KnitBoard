@@ -10,14 +10,16 @@ import SwiftUI
 
 struct EditTicketView: View {
     @Binding var ticket: Ticket
+    @Binding var shouldContinueEditing: Bool
+
     var statuses: [TicketStatus] = TicketStatus.allCases
     var body: some View {
         let statusBinding = Binding(get: {
-            self.statuses.firstIndex(of: self.ticket.status) ?? 0
-            
+            self.ticket.status.rawValue
+
         }, set: { index in
-            self.ticket.status = self.statuses[index]
-            
+            self.ticket.status = TicketStatus(rawValue: index)!
+
         })
         return VStack() {
             HStack() {
@@ -27,7 +29,7 @@ struct EditTicketView: View {
             }
             Picker(selection: statusBinding, label: Text("Status:")){
                 ForEach(0 ..< statuses.count) { index in
-                    Text(self.statuses[index].rawValue).tag(index)
+                    Text(TicketStatus(rawValue: index)!.description).tag(index)
                 }
             }
             HStack() {
@@ -38,14 +40,22 @@ struct EditTicketView: View {
                 Text("Yarn:")
                 TextField("Yarn", text: $ticket.yarn)
             }
-        }
+            
+            Button(action: {
+                self.shouldContinueEditing = false
+            }) {
+                Text("Done").padding()
+            }
+        }.padding()
     }
 }
 
 struct EditTicketView_Previews: PreviewProvider {
     
     static var previews: some View {
-        let ticket = Ticket(name: "My Sweater", pattern: "A pattern", yarn: "a yarn")
-        return EditTicketView(ticket: .constant(ticket))
+        Group {
+            EditTicketView(ticket: .constant(testTicket), shouldContinueEditing: .constant(true)).colorScheme(.dark)
+            EditTicketView(ticket: .constant(testTicket), shouldContinueEditing: .constant(true)).colorScheme(.light)
+        }
     }
 }

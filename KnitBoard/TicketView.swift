@@ -13,13 +13,12 @@ struct TicketView: View {
     var body: some View {
         VStack(alignment: .leading) {
             PropertyView(propertyName: "Name", propertyValue: ticket.name)
-            PropertyView(propertyName: "Status", propertyValue: ticket.status.rawValue)
+            PropertyView(propertyName: "Status", propertyValue: ticket.status.description)
             PropertyView(propertyName: "Pattern", propertyValue: ticket.pattern)
             PropertyView(propertyName: "Yarn", propertyValue: ticket.yarn)
         }
         .frame(maxWidth: .infinity, alignment:.leading)
         .padding()
-        .background(Color("textBackgroundColor"))
     }
 }
 

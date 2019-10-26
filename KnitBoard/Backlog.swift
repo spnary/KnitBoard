@@ -7,22 +7,24 @@
 //
 
 import Foundation
-import SwiftUI
+import Combine
 
-class Backlog: ObservableObject{
+class Backlog: ObservableObject {
+    
     @Published var tickets: [Ticket] = []
     
+    @Published var isEditing = false
+
     init(tickets: [Ticket]) {
         self.tickets = tickets
-    }
-    
-    func updateTicket(_ ticket: Ticket) {
-        if let ticketIndex = tickets.firstIndex(of: ticket) {
-            tickets.remove(at: ticketIndex)
-            tickets.insert(ticket, at: ticketIndex)
-        } else {
-            tickets.append(ticket)
-        }
         
     }
+
 }
+
+let testTickets = [
+    Ticket(name: "Project 1", pattern: "Pattern 1", yarn: "Yarn 1"),
+    Ticket(name: "Project 2", pattern: "Pattern 2", yarn: "Yarn 2"),
+    Ticket(name: "Project 3", pattern: "Pattern 3", yarn: "Yarn 3")
+]
+let testBacklog = Backlog(tickets: testTickets)

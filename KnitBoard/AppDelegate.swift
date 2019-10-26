@@ -23,6 +23,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             Ticket(name: "Project 4", pattern: "Pattern 4", yarn: "Yarn 4")
         ]
         let backlog = Backlog(tickets: testTickets)
+        
         // Create the SwiftUI view that provides the window contents.
         let contentView = ContentView().environmentObject(backlog)
 

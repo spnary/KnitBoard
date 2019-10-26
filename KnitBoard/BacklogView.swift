@@ -10,21 +10,22 @@ import SwiftUI
 
 struct BacklogView: View {
     @EnvironmentObject var backlog: Backlog
+    @State var ticketIndexToEdit = 0
+    
     var body: some View {
-        NavigationView() {
-                List(backlog.tickets) { ticket in
-                    NavigationLink(destination: EditTicketView(ticket: Binding<Ticket>(get: { ticket }, set: { ticket in
-                        self.backlog.updateTicket(ticket)
-                    }))) {
-                        TicketView(ticket: ticket)
-                    }
-                    
-
-                }
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .background(Color("windowBackgroundColor"))
+        if backlog.isEditing {
+            return AnyView(EditTicketView(ticket: self.$backlog.tickets[ticketIndexToEdit], shouldContinueEditing: self.$backlog.isEditing))
+        } else {
+            return AnyView(List(backlog.tickets) { ticket in
+                return Button(action: {
+                    self.ticketIndexToEdit = self.backlog.tickets.firstIndex(of: ticket) ?? 0
+                    self.backlog.isEditing = true
+                }) {
+                    return TicketView(ticket: ticket)
+                }.buttonStyle(PlainButtonStyle())
+            }
+            .frame(maxWidth: .infinity, maxHeight: .infinity))
         }
-        .navigationViewStyle(DefaultNavigationViewStyle())
     }
 }
 

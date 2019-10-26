@@ -10,32 +10,28 @@ import SwiftUI
 
 struct ContentView: View {
     @EnvironmentObject var backlog: Backlog
-    var menuOptions: [String] = [
-        "Backlog",
-        "Board"
-    ]
     var body: some View {
         VStack(alignment: .leading) {
             HStack(alignment: .center) {
-                Button(action: {
-                    self.addTicket()
-                }) {
-                    Text("+")
-                }.padding()
                 Spacer()
                 Text("KnitBoard").font(.title)
                 Spacer()
             }
-            NavigationView() {
-                List() {
-                    NavigationLink(destination: BacklogView().environmentObject(backlog) ) {
-                        Text("Backlog")
-                    }
-                    NavigationLink(destination: Text("Build the board here").frame(maxWidth: .infinity, maxHeight: .infinity)) {
+            Button(action: {
+                self.addTicket()
+            }) {
+                Text("+")
+            }.padding([.leading])
+            
+            TabView() {
+                BacklogView().environmentObject(backlog).tabItem(){
+                    Text("Backlog")
+                }
+                Text("Build the board here").frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .tabItem(){
                         Text("Board")
-                    }
-                }.frame(minWidth: 100, maxWidth: 200)
-                }.navigationViewStyle(DoubleColumnNavigationViewStyle())
+                }
+            }
         }
     }
     
@@ -48,12 +44,9 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        let tickets = [
-            Ticket(name: "Project 1", pattern: "Pattern 1", yarn: "Yarn 1"),
-            Ticket(name: "Project 2", pattern: "Pattern 2", yarn: "Yarn 2"),
-            Ticket(name: "Project 3", pattern: "Pattern 3", yarn: "Yarn 3")
-        ]
-        let backlog = Backlog(tickets: tickets)
-        return ContentView().environmentObject(backlog)
+        Group {
+            ContentView().environmentObject(testBacklog).colorScheme(.dark)
+            ContentView().environmentObject(testBacklog).colorScheme(.light)
+        }
     }
 }

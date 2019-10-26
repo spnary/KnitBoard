@@ -9,13 +9,19 @@
 import SwiftUI
 
 struct BoardView: View {
+    var statuses = TicketStatus.allCases
+    @EnvironmentObject var backlog: Backlog
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello World!"/*@END_MENU_TOKEN@*/)
+        HStack() {
+            ForEach(statuses, id: \.self) { status in
+                BoardColumnView(status: status, tickets: self.$backlog.tickets )
+            }
+        }
     }
 }
 
 struct BoardView_Previews: PreviewProvider {
     static var previews: some View {
-        BoardView()
+        BoardView().environmentObject(testBacklog)
     }
 }

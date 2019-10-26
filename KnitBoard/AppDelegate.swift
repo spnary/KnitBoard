@@ -16,13 +16,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        let testTickets = [
-            Ticket(name: "Project 1", pattern: "Pattern 1", yarn: "Yarn 1"),
-            Ticket(name: "Project 2", pattern: "Pattern 2", yarn: "Yarn 2"),
-            Ticket(name: "Project 3", pattern: "Pattern 3", yarn: "Yarn 3"),
-            Ticket(name: "Project 4", pattern: "Pattern 4", yarn: "Yarn 4")
-        ]
-        let backlog = Backlog(tickets: testTickets)
+
+        let backlog = testBacklog
         
         // Create the SwiftUI view that provides the window contents.
         let contentView = ContentView().environmentObject(backlog)

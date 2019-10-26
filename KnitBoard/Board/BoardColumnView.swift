@@ -14,9 +14,9 @@ struct BoardColumnView: View {
     var body: some View {
         VStack(alignment: .center) {
             Text(status.description)
-            ScrollView() {
-                ForEach(tickets.filter(){$0.status == status}) { ticket in
-                    TicketView(ticket: ticket)
+            VStack(alignment: .leading) {
+                    ForEach(tickets.filter(){$0.status == status}) { ticket in
+                        TicketView(ticket: ticket)
                     }
             }
         }

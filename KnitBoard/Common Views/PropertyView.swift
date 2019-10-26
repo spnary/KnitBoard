@@ -13,7 +13,7 @@ struct PropertyView: View {
     var propertyValue: String
     var body: some View {
         HStack(alignment:.top) {
-            Text("\(propertyName): ")
+            Text("\(propertyName): ").frame(width: 60, alignment: .leading)
             Text(propertyValue)
                 
         }.lineLimit(nil)

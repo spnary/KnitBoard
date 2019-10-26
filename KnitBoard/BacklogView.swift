@@ -14,7 +14,7 @@ struct BacklogView: View {
     
     var body: some View {
         if backlog.isEditing {
-            return AnyView(EditTicketView(ticket: self.$backlog.tickets[ticketIndexToEdit], shouldContinueEditing: self.$backlog.isEditing))
+            return AnyView(EditTicketView(ticket: self.$backlog.tickets[ticketIndexToEdit], shouldContinueEditing: self.$backlog.isEditing, selectedStatus: self.$backlog.tickets[ticketIndexToEdit].status))
         } else {
             return AnyView(List(backlog.tickets) { ticket in
                 return Button(action: {

@@ -48,11 +48,7 @@ class Ticket: Identifiable, ObservableObject, Hashable {
     
     let id: UUID
     @Published var name: String
-    @Published var status: TicketStatus {
-        didSet{
-            objectWillChange.send()
-        }
-    }
+    @Published var status: TicketStatus
     @Published var pattern: String
     @Published var yarn: String
     

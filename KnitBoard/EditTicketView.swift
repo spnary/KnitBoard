@@ -11,16 +11,15 @@ import SwiftUI
 struct EditTicketView: View {
     @Binding var ticket: Ticket
     @Binding var shouldContinueEditing: Bool
-
+    @Binding var selectedStatus: TicketStatus {
+        didSet {
+            ticket.status = selectedStatus
+        }
+    }
     var statuses: [TicketStatus] = TicketStatus.allCases
     var body: some View {
-        let statusBinding = Binding(get: {
-            self.ticket.status.rawValue
-
-        }, set: { index in
-            self.ticket.status = TicketStatus(rawValue: index)!
-
-        })
+        let statusBinding = Binding(get: {self.selectedStatus.rawValue},
+                                    set: { self.selectedStatus = TicketStatus(rawValue: $0)! })
         return VStack() {
             HStack() {
                 Text("Name:")
@@ -54,8 +53,8 @@ struct EditTicketView_Previews: PreviewProvider {
     
     static var previews: some View {
         Group {
-            EditTicketView(ticket: .constant(testTicket), shouldContinueEditing: .constant(true)).colorScheme(.dark)
-            EditTicketView(ticket: .constant(testTicket), shouldContinueEditing: .constant(true)).colorScheme(.light)
+            EditTicketView(ticket: .constant(testTicket), shouldContinueEditing: .constant(true), selectedStatus: .constant(.needsDefinition)).colorScheme(.dark)
+            EditTicketView(ticket: .constant(testTicket), shouldContinueEditing: .constant(true), selectedStatus: .constant(.needsDefinition)).colorScheme(.light)
         }
     }
 }

@@ -100,6 +100,33 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		BA47C85A2364C67000978349 /* Board */ = {
+			isa = PBXGroup;
+			children = (
+				BA47C8562364A99900978349 /* BoardView.swift */,
+				BA47C8582364AAC600978349 /* BoardColumnView.swift */,
+			);
+			path = Board;
+			sourceTree = "<group>";
+		};
+		BA47C85B2364C69400978349 /* Common Views */ = {
+			isa = PBXGroup;
+			children = (
+				BA4D4CC1235CCAEB0014D632 /* TicketView.swift */,
+				BA4D4CC3235CD3650014D632 /* PropertyView.swift */,
+				BA4D4CC9235D1ADC0014D632 /* EditTicketView.swift */,
+			);
+			path = "Common Views";
+			sourceTree = "<group>";
+		};
+		BA47C85C2364C6A100978349 /* Backlog */ = {
+			isa = PBXGroup;
+			children = (
+				BA4D4CBF235CCA810014D632 /* BacklogView.swift */,
+			);
+			path = Backlog;
+			sourceTree = "<group>";
+		};
 		BA4D4C84235CC5970014D632 = {
 			isa = PBXGroup;
 			children = (
@@ -125,12 +152,9 @@
 			children = (
 				BA4D4C90235CC5970014D632 /* AppDelegate.swift */,
 				BA4D4C92235CC5970014D632 /* ContentView.swift */,
-				BA47C8562364A99900978349 /* BoardView.swift */,
-				BA47C8582364AAC600978349 /* BoardColumnView.swift */,
-				BA4D4CBF235CCA810014D632 /* BacklogView.swift */,
-				BA4D4CC1235CCAEB0014D632 /* TicketView.swift */,
-				BA4D4CC3235CD3650014D632 /* PropertyView.swift */,
-				BA4D4CC9235D1ADC0014D632 /* EditTicketView.swift */,
+				BA47C85A2364C67000978349 /* Board */,
+				BA47C85C2364C6A100978349 /* Backlog */,
+				BA47C85B2364C69400978349 /* Common Views */,
 				BA47C8552364A93800978349 /* Models */,
 				BA4D4C94235CC59C0014D632 /* Assets.xcassets */,
 				BA4D4C99235CC59C0014D632 /* Main.storyboard */,

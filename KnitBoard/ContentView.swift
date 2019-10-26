@@ -27,7 +27,7 @@ struct ContentView: View {
                 BacklogView().environmentObject(backlog).tabItem(){
                     Text("Backlog")
                 }
-                Text("Build the board here").frame(maxWidth: .infinity, maxHeight: .infinity)
+                BoardView()
                     .tabItem(){
                         Text("Board")
                 }

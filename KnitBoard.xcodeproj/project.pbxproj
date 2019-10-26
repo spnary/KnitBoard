@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA47C8572364A99900978349 /* BoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA47C8562364A99900978349 /* BoardView.swift */; };
 		BA4D4C91235CC5970014D632 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4D4C90235CC5970014D632 /* AppDelegate.swift */; };
 		BA4D4C93235CC5970014D632 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4D4C92235CC5970014D632 /* ContentView.swift */; };
 		BA4D4C95235CC59C0014D632 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA4D4C94235CC59C0014D632 /* Assets.xcassets */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BA47C8562364A99900978349 /* BoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardView.swift; sourceTree = "<group>"; };
 		BA4D4C8D235CC5970014D632 /* KnitBoard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KnitBoard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA4D4C90235CC5970014D632 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA4D4C92235CC5970014D632 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -87,6 +89,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BA47C8552364A93800978349 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BA4D4CC5235CD9E70014D632 /* Ticket.swift */,
+				BA4D4CC7235CF0ED0014D632 /* Backlog.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		BA4D4C84235CC5970014D632 = {
 			isa = PBXGroup;
 			children = (
@@ -112,12 +123,12 @@
 			children = (
 				BA4D4C90235CC5970014D632 /* AppDelegate.swift */,
 				BA4D4C92235CC5970014D632 /* ContentView.swift */,
+				BA47C8562364A99900978349 /* BoardView.swift */,
 				BA4D4CBF235CCA810014D632 /* BacklogView.swift */,
 				BA4D4CC1235CCAEB0014D632 /* TicketView.swift */,
 				BA4D4CC3235CD3650014D632 /* PropertyView.swift */,
 				BA4D4CC9235D1ADC0014D632 /* EditTicketView.swift */,
-				BA4D4CC5235CD9E70014D632 /* Ticket.swift */,
-				BA4D4CC7235CF0ED0014D632 /* Backlog.swift */,
+				BA47C8552364A93800978349 /* Models */,
 				BA4D4C94235CC59C0014D632 /* Assets.xcassets */,
 				BA4D4C99235CC59C0014D632 /* Main.storyboard */,
 				BA4D4C9C235CC59C0014D632 /* Info.plist */,
@@ -290,6 +301,7 @@
 				BA4D4C93235CC5970014D632 /* ContentView.swift in Sources */,
 				BA4D4CCA235D1ADC0014D632 /* EditTicketView.swift in Sources */,
 				BA4D4CC8235CF0ED0014D632 /* Backlog.swift in Sources */,
+				BA47C8572364A99900978349 /* BoardView.swift in Sources */,
 				BA4D4CC2235CCAEB0014D632 /* TicketView.swift in Sources */,
 				BA4D4C91235CC5970014D632 /* AppDelegate.swift in Sources */,
 			);

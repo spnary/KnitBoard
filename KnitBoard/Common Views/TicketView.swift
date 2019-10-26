@@ -17,7 +17,7 @@ struct TicketView: View {
             PropertyView(propertyName: "Pattern", propertyValue: ticket.pattern)
             PropertyView(propertyName: "Yarn", propertyValue: ticket.yarn)
         }
-        .padding()
+        .padding().aspectRatio((5/3), contentMode: .fill)
     }
 }
 

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BA0876082408929A00EEEE38 /* ColumnHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0876072408929A00EEEE38 /* ColumnHeaderView.swift */; };
+		BA08760A2408A7AC00EEEE38 /* TicketDropDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0876092408A7AC00EEEE38 /* TicketDropDelegate.swift */; };
 		BA47C8572364A99900978349 /* BoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA47C8562364A99900978349 /* BoardView.swift */; };
 		BA47C8592364AAC600978349 /* BoardColumnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA47C8582364AAC600978349 /* BoardColumnView.swift */; };
 		BA4D4C91235CC5970014D632 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4D4C90235CC5970014D632 /* AppDelegate.swift */; };
@@ -44,6 +45,7 @@
 
 /* Begin PBXFileReference section */
 		BA0876072408929A00EEEE38 /* ColumnHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColumnHeaderView.swift; sourceTree = "<group>"; };
+		BA0876092408A7AC00EEEE38 /* TicketDropDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketDropDelegate.swift; sourceTree = "<group>"; };
 		BA47C8562364A99900978349 /* BoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardView.swift; sourceTree = "<group>"; };
 		BA47C8582364AAC600978349 /* BoardColumnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardColumnView.swift; sourceTree = "<group>"; };
 		BA4D4C8D235CC5970014D632 /* KnitBoard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KnitBoard.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,6 +100,7 @@
 			children = (
 				BA4D4CC5235CD9E70014D632 /* Ticket.swift */,
 				BA4D4CC7235CF0ED0014D632 /* Backlog.swift */,
+				BA0876092408A7AC00EEEE38 /* TicketDropDelegate.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -336,6 +339,7 @@
 				BA47C8572364A99900978349 /* BoardView.swift in Sources */,
 				BA4D4CC2235CCAEB0014D632 /* TicketView.swift in Sources */,
 				BA4D4C91235CC5970014D632 /* AppDelegate.swift in Sources */,
+				BA08760A2408A7AC00EEEE38 /* TicketDropDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

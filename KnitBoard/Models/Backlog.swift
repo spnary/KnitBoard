@@ -19,6 +19,12 @@ class Backlog: ObservableObject {
         self.tickets = tickets
         
     }
+    
+    func update(_ ticket: Ticket) {
+        guard let ticketIndex = tickets.firstIndex(where: {$0.id == ticket.id}) else { return }
+        tickets.remove(at: ticketIndex)
+        tickets.insert(ticket, at: ticketIndex)
+    }
 
 }
 

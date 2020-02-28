@@ -20,7 +20,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let backlog = testBacklog
         
         // Create the SwiftUI view that provides the window contents.
-        let contentView = ContentView().environmentObject(backlog)
+        let contentView = ContentView().environmentObject(backlog).frame(minWidth: 1000, maxWidth: .infinity, minHeight: 500, maxHeight: .infinity)
 
         // Create the window and set the content view. 
         window = NSWindow(

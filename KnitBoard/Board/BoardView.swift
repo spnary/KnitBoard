@@ -12,10 +12,17 @@ struct BoardView: View {
     var statuses = TicketStatus.allCases
     @EnvironmentObject var backlog: Backlog
     var body: some View {
-        ScrollView() {
+        VStack() {
             HStack(alignment: .top) {
-                ForEach(statuses, id: \.self) { status in
-                    BoardColumnView(status: status, tickets: self.$backlog.tickets )
+                ForEach(statuses, id: \.self){ status in
+                    ColumnHeaderView(status: status)
+                }
+            }
+            ScrollView() {
+                HStack(alignment: .top) {
+                    ForEach(statuses, id: \.self) { status in
+                        BoardColumnView(status: status, tickets: self.$backlog.tickets )
+                    }
                 }
             }
         }

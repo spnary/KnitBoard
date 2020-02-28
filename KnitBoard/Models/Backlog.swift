@@ -26,6 +26,8 @@ let testTickets = [
     Ticket(name: "Project 1 with a really long name", pattern: "Pattern 1", yarn: "Yarn 1"),
     Ticket(name: "Project 2", pattern: "Pattern 2", yarn: "Yarn 2"),
     Ticket(name: "Project 3", pattern: "Pattern 3", yarn: "Yarn 3"),
+    Ticket(name: "Project 4 with a really long name", pattern: "Pattern 1", yarn: "Yarn 1"),
+    Ticket(name: "Project 5 with a really long name", pattern: "Pattern 1", yarn: "Yarn 1"),
     Ticket(name: "Chunky Hat", status: .readyToKnit, pattern: "Chunky Hat Pattern", yarn: "Super Tuff Puff Canary"),
     Ticket(name: "Chunky Hat", status: .readyToKnit, pattern: "Chunky Hat Pattern", yarn: "Super Tuff Puff Pink"),
     Ticket(name: "Sweater", status: .readyToKnit, pattern: "Bog Jacket", yarn: "Cotton Fleece"),

@@ -12,12 +12,9 @@ struct BoardColumnView: View {
     var status: TicketStatus
     @Binding var tickets: [Ticket]
     var body: some View {
-        VStack(alignment: .center) {
-            Text(status.description)
-            VStack(alignment: .leading) {
-                    ForEach(tickets.filter(){$0.status == status}) { ticket in
-                        TicketView(ticket: ticket)
-                    }
+        VStack(spacing: 5.0) {
+            ForEach(tickets.filter(){$0.status == status}) { ticket in
+                TicketView(ticket: ticket)
             }
         }
     }

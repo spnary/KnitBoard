@@ -13,7 +13,7 @@ protocol TicketUpdatedDelegate: class {
     func ticketUpdated(_ ticket: Ticket)
 }
 
-enum TicketStatus: Int, CaseIterable {
+enum TicketStatus: Int, CaseIterable, Codable {
     
     case needsDefinition = 0
     case readyToKnit
@@ -37,13 +37,9 @@ enum TicketStatus: Int, CaseIterable {
     }
 }
 
-class Ticket: Identifiable, ObservableObject, Hashable {
+class Ticket: NSObject, Identifiable, ObservableObject, Codable {
     static func == (lhs: Ticket, rhs: Ticket) -> Bool {
         return lhs.id == rhs.id
-    }
-    
-    func hash(into hasher: inout Hasher) {
-        hasher.combine(id)
     }
     
     let id: UUID
@@ -59,6 +55,44 @@ class Ticket: Identifiable, ObservableObject, Hashable {
         self.pattern = pattern
         self.yarn = yarn
     }
+    
+    enum CodingKeys: String, CodingKey {
+        case id
+        case name
+        case status
+        case pattern
+        case yarn
+    }
+    
+    required init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        id = try values.decode(UUID.self, forKey: .id)
+        name = try values.decode(String.self, forKey: .name)
+        status = try values.decode(TicketStatus.self, forKey: .status)
+        pattern = try values.decode(String.self, forKey: .pattern)
+        yarn = try values.decode(String.self, forKey: .yarn)
+    }
+    
+    func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(id, forKey: .id)
+        try container.encode(name, forKey: .name)
+        try container.encode(status, forKey: .status)
+        try container.encode(pattern, forKey: .pattern)
+        try container.encode(yarn, forKey: .yarn)
+    }
+}
+
+extension Ticket: NSItemProviderWriting {
+    static var writableTypeIdentifiersForItemProvider: [String] {
+        return [kUTTypeJSON as String]
+    }
+    
+    func loadData(withTypeIdentifier typeIdentifier: String, forItemProviderCompletionHandler completionHandler: @escaping (Data?, Error?) -> Void) -> Progress? {
+        completionHandler(try? JSONEncoder().encode(self), nil)
+        return nil
+    }
+    
     
 }
 

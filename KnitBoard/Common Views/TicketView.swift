@@ -22,6 +22,7 @@ struct TicketView: View {
         .aspectRatio((5/3), contentMode: .fit)
         .background(Color("ticketBackground"))
         .cornerRadius(10)
+        .onDrag() { NSItemProvider(object: self.ticket) }
     }
 }
 

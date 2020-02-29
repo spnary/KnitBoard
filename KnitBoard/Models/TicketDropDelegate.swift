@@ -13,6 +13,7 @@ struct TicketDropDelegate: DropDelegate {
     let status: TicketStatus
     let backlog: Backlog
     let decoder = JSONDecoder()
+    @Binding var isDropping: Bool
     func performDrop(info: DropInfo) -> Bool {
         guard let item = info.itemProviders(for: [kUTTypeJSON as String]).first  else { return false }
         item.loadItem(forTypeIdentifier: kUTTypeJSON as String, options: nil) { (ticketData, error) in
@@ -24,5 +25,13 @@ struct TicketDropDelegate: DropDelegate {
             }
         }
         return true
+    }
+    
+    func dropEntered(info: DropInfo) {
+        isDropping = true
+    }
+    
+    func dropExited(info: DropInfo) {
+        isDropping = false
     }
 }

@@ -11,10 +11,11 @@ import SwiftUI
 struct BoardColumnView: View {
     var status: TicketStatus
     var width: CGFloat
+    @State var isDropping: Bool = false
     @Binding var tickets: [Ticket]
     @EnvironmentObject var backlog: Backlog
     var body: some View {
-        let dropDelegate = TicketDropDelegate(status: status, backlog: backlog)
+        let dropDelegate = TicketDropDelegate(status: status, backlog: backlog, isDropping: $isDropping)
         return VStack(spacing: 5.0) {
             
             ForEach(tickets.filter(){$0.status == status}) { ticket in
@@ -22,6 +23,7 @@ struct BoardColumnView: View {
             }
             Spacer()
         }.frame(minWidth: width, maxHeight: .infinity)
+            .background(isDropping ? Color("dropHighlight") : Color(.clear))
     .onDrop(of: [kUTTypeJSON as String], delegate: dropDelegate)
     }
 }

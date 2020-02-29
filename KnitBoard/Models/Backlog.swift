@@ -9,21 +9,53 @@
 import Foundation
 import Combine
 
-class Backlog: ObservableObject {
+class Backlog: NSObject, ObservableObject, Codable {
     
-    @Published var tickets: [Ticket] = []
+    @Published var tickets: [Ticket] = [] {
+        didSet {
+            writeToFile()
+        }
+    }
     
     @Published var isEditing = false
+    
+    enum CodingKeys: String, CodingKey {
+        case tickets
+    }
 
     init(tickets: [Ticket]) {
         self.tickets = tickets
         
     }
     
+    required init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        tickets = try values.decode([Ticket].self, forKey: .tickets)
+    }
+    
+    func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(tickets, forKey: .tickets)
+    }
+    
+    class func backlog(from url: URL) throws -> Backlog {
+        let jsonData = try Data(contentsOf: url)
+        let decoder = JSONDecoder()
+        return try decoder.decode(Backlog.self, from: jsonData)
+    }
+    
     func update(_ ticket: Ticket) {
         guard let ticketIndex = tickets.firstIndex(where: {$0.id == ticket.id}) else { return }
         tickets.remove(at: ticketIndex)
         tickets.insert(ticket, at: ticketIndex)
+    }
+    
+    private func writeToFile() {
+        let encoder = JSONEncoder()
+        let json = try? encoder.encode(self)
+        let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+        let fileURL =  documentsURL.appendingPathComponent("backlog.json")
+        try? json?.write(to: fileURL)
     }
 
 }

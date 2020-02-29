@@ -9,23 +9,27 @@
 import SwiftUI
 
 struct BoardView: View {
+    let columnSpacing: CGFloat = 5.0
     var statuses = TicketStatus.allCases
     @EnvironmentObject var backlog: Backlog
     var body: some View {
-        VStack() {
-            HStack(alignment: .top) {
-                ForEach(statuses, id: \.self){ status in
-                    ColumnHeaderView(status: status)
+        GeometryReader { proxy in
+            VStack() {
+                HStack(alignment: .top, spacing: self.columnSpacing) {
+                    ForEach(self.statuses, id: \.self){ status in
+                        ColumnHeaderView(status: status)
+                    }
                 }
-            }
-            ScrollView() {
-                HStack(alignment: .top) {
-                    ForEach(statuses, id: \.self) { status in
-                        BoardColumnView(status: status, tickets: self.$backlog.tickets )
+                ScrollView() {
+                    HStack(alignment: .top, spacing: self.columnSpacing) {
+                        ForEach(self.statuses, id: \.self) { status in
+                            BoardColumnView(status: status, width: proxy.size.width/CGFloat(self.statuses.count) - 2 * self.columnSpacing ,tickets: self.$backlog.tickets )
+                        }
                     }
                 }
             }
         }
+        
     }
 }
 

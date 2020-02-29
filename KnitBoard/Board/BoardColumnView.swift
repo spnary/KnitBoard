@@ -10,22 +10,24 @@ import SwiftUI
 
 struct BoardColumnView: View {
     var status: TicketStatus
+    var width: CGFloat
     @Binding var tickets: [Ticket]
     @EnvironmentObject var backlog: Backlog
     var body: some View {
         let dropDelegate = TicketDropDelegate(status: status, backlog: backlog)
         return VStack(spacing: 5.0) {
+            
             ForEach(tickets.filter(){$0.status == status}) { ticket in
                 TicketView(ticket: ticket)
             }
             Spacer()
-        }.frame(minWidth: 150, maxHeight: .infinity)
+        }.frame(minWidth: width, maxHeight: .infinity)
     .onDrop(of: [kUTTypeJSON as String], delegate: dropDelegate)
     }
 }
 
 struct BoardColumnView_Previews: PreviewProvider {
     static var previews: some View {
-        BoardColumnView(status: .needsDefinition,tickets: .constant(testTickets)).frame(width: 200)
+        BoardColumnView(status: .needsDefinition, width: 200.0, tickets: .constant(testTickets))
     }
 }
